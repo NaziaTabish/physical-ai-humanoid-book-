@@ -1,6 +1,5 @@
 {
   "framework": "docusaurus",
-  "rootDirectory": ".",
   "builds": [
     {
       "src": "package.json",
