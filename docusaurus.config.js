@@ -8,10 +8,10 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://NaziaTabish.github.io', // This will be updated for GitHub Pages
+  url: 'https://physical-ai-humanoid-book-.vercel.app', // Vercel deployment URL
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub Pages, this is usually '/<repository-name>/'
-  baseUrl: '/physical-ai-humanoid-book-/',
+  // For Vercel deployment, use '/' for root
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   organizationName: 'NaziaTabish', // Usually your GitHub org/user name.
