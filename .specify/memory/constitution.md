@@ -1,55 +1,51 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+Version change: N/A -> 1.0.0
+Modified principles: None (new constitution)
+Added sections: All principles and sections
+Removed sections: None
+Templates requiring updates: N/A (first version)
+Follow-up TODOs: None
+-->
+# Physical AI & Humanoid Robotics – Essentials Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Simplicity and Minimalism
+All implementations must prioritize simplicity and minimalism; Code, content, and design must follow "less is more" philosophy; Complexity must be justified with clear benefits outweighing maintenance overhead.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Technical Accuracy and Clarity
+All content must maintain high technical accuracy and clarity; Explanations must be accessible to beginners while remaining technically sound; All concepts must be clearly defined with minimal jargon or proper terminology explanations.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Lightweight Architecture (NON-NEGOTIABLE)
+The textbook must use lightweight architecture only; Docusaurus with default theme, static-site generation, no heavy libraries or backend services; Free-tier hosting compatible with fast builds and load times.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Content-First Development
+Development must prioritize content quality and structure; All technical decisions must support optimal content delivery and readability; User experience must be secondary to content accuracy and clarity.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Standards Compliance and Accessibility
+All implementations must follow web standards and accessibility guidelines; High contrast and readability required; Mobile and desktop compatibility essential for learning accessibility.
 
-### [PRINCIPLE_6_NAME]
+### VI. Research-Concurrent Writing
 
+Content development must occur alongside research and verification; Information must be validated while writing; Focus on widely accepted robotics and AI fundamentals rather than speculative future technologies.
 
-[PRINCIPLE__DESCRIPTION]
-
-## [SECTION_2_NAME]
+## Technical Requirements
 <!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
 
-[SECTION_2_CONTENT]
+All implementations must use Docusaurus framework with GitHub Pages deployment; Content must be written in Markdown with consistent formatting standards; Only lightweight assets (SVG, small PNG) allowed; No external runtime dependencies permitted.
 <!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
 
-## [SECTION_3_NAME]
+## Development Workflow
 <!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
 
-[SECTION_3_CONTENT]
+All content must undergo validation for relevance, technical accuracy, clear explanation, and concise length; Each chapter must meet defined acceptance criteria before completion; Writing workflow must use Spec-Kit Plus and Claude Code for structure, generation, and validation.
 <!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
 
 ## Governance
 <!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
+This constitution governs all development of the Physical AI & Humanoid Robotics textbook; All changes must comply with core principles; Amendments require explicit documentation and team approval; All PRs/reviews must verify compliance with simplicity, accuracy, and lightweight architecture requirements.
 <!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-07 | **Last Amended**: 2025-12-07

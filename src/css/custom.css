@@ -1,0 +1,56 @@
+/* New Professional Theme for Physical AI & Humanoid Robotics Textbook */
+:root {
+  --ifm-color-primary: #1a73e8; /* Google blue */
+  --ifm-color-primary-dark: #1557b0;
+  --ifm-color-primary-darker: #144b9e;
+  --ifm-color-primary-darkest: #113d81;
+  --ifm-color-primary-light: #4285f4;
+  --ifm-color-primary-lighter: #5a95f5;
+  --ifm-color-primary-lightest: #84aef7;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(26, 115, 232, 0.1);
+
+  /* Additional theme colors */
+  --ifm-color-secondary: #6c757d;
+  --ifm-color-success: #28a745;
+  --ifm-color-info: #17a2b8;
+  --ifm-color-warning: #ffc107;
+  --ifm-color-danger: #dc3545;
+
+  /* Backgrounds */
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f8f9fa;
+
+  /* Text */
+  --ifm-font-color-base: #202124;
+  --ifm-font-color-base-inverse: #ffffff;
+  --ifm-font-color-secondary: #5f6368;
+
+  /* Borders */
+  --ifm-border-color: #dadce0;
+
+  /* Shadows */
+  --ifm-global-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302);
+  --ifm-global-shadow-lw: 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  --ifm-global-shadow-md: 0 1px 2px 1px rgba(60, 64, 67, 0.1);
+  --ifm-global-shadow-tl: 0 8px 10px 1px rgba(60, 64, 67, 0.1);
+}
+
+/* Dark mode theme */
+[data-theme='dark'] {
+  --ifm-color-primary: #8ab4f8; /* Light blue */
+  --ifm-color-primary-dark: #658def;
+  --ifm-color-primary-darker: #527ee9;
+  --ifm-color-primary-darkest: #3365c7;
+  --ifm-color-primary-light: #a6c7ff;
+  --ifm-color-primary-lighter: #b9d5ff;
+  --ifm-color-primary-lightest: #e6f0ff;
+  --docusaurus-highlighted-code-line-bg: rgba(138, 180, 248, 0.2);
+
+  /* Dark mode additional colors */
+  --ifm-background-color: #0d1117;
+  --ifm-background-surface-color: #161b22;
+  --ifm-font-color-base: #e6e6e6;
+  --ifm-font-color-secondary: #8b949e;
+  --ifm-border-color: #30363d;
+}

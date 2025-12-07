@@ -1,0 +1,63 @@
+.features {
+  padding: 3rem 0;
+  width: 100%;
+  background-color: #f8f9fa;
+}
+
+.chapterCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  height: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.chapterCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #2e8555;
+}
+
+.chapterHeader {
+  margin-bottom: 1rem;
+}
+
+.chapterNumber {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2e8555;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.chapterTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.chapterBody {
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.chapterDescription {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.chapterFooter {
+  text-align: center;
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}

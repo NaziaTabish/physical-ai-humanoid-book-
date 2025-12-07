@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git fetch --all --prune)",
+      "Bash(pwsh -Command \".specify/scripts/powershell/setup-plan.ps1 -Json\")",
+      "Bash(git checkout 1-textbook-generation)",
+      "Bash(git checkout -b 1-textbook-generation)",
+      "Bash(git rev-parse --git-dir)",
+      "Bash(node --version)",
+      "Bash(npm --version)",
+      "Bash(npm init docusaurus@latest . textbook-classic --typescript)",
+      "Bash(npm install @docusaurus/core@latest @docusaurus/preset-classic@latest @mdx-js/react@latest)",
+      "Bash(npm run start -- --port 3001 --host 0.0.0.0)",
+      "Bash(npm run build)",
+      "Bash(npm run start -- --port 3002 --host 0.0.0.0)",
+      "Bash(head -n 5 docs/chapter-*.md)",
+      "Bash(pkill -f \"docusaurus start\")",
+      "Bash(npm run start -- --port 3003 --host 0.0.0.0)",
+      "Bash(git init)",
+      "Bash(git remote add origin https://github.com/NaziaTabish/physical-ai-humanoid-book-.git)",
+      "Bash(git add .)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

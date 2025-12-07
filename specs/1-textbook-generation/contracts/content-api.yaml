@@ -1,0 +1,89 @@
+# Content Management API Contract
+# Note: This is for documentation purposes only as the textbook is static
+# No actual API will be implemented since this is a static site
+
+openapi: 3.0.0
+info:
+  title: Textbook Content API
+  version: 1.0.0
+  description: API contract for textbook content management (reference only - static implementation)
+
+paths:
+  /chapters:
+    get:
+      summary: Get all textbook chapters
+      description: Retrieve a list of all 6 textbook chapters
+      responses:
+        '200':
+          description: List of chapters
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Chapter'
+
+  /chapters/{chapterId}:
+    get:
+      summary: Get specific chapter
+      description: Retrieve a specific textbook chapter by ID
+      parameters:
+        - name: chapterId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Chapter content
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Chapter'
+        '404':
+          description: Chapter not found
+
+components:
+  schemas:
+    Chapter:
+      type: object
+      required:
+        - id
+        - title
+        - content
+        - wordCount
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the chapter
+          example: "chapter-1-introduction-to-physical-ai"
+        title:
+          type: string
+          description: Display title of the chapter
+          example: "Introduction to Physical AI"
+        content:
+          type: string
+          description: Markdown content of the chapter
+          example: "# Introduction\n\nPhysical AI represents..."
+        wordCount:
+          type: integer
+          description: Number of words in the chapter
+          example: 1200
+        learningObjectives:
+          type: array
+          items:
+            type: string
+          description: List of learning objectives
+          example: ["Define Physical AI", "Understand key differences from Virtual AI"]
+        diagrams:
+          type: array
+          items:
+            type: string
+          description: List of diagram references
+          example: ["/img/diagram1.svg"]
+        references:
+          type: array
+          items:
+            type: string
+          description: List of APA-formatted references
+          example: ["Smith, J. (2023). Physical AI Fundamentals..."]

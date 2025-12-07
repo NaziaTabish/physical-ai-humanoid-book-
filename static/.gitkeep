@@ -1,0 +1,2 @@
+# This file exists to ensure the static directory is tracked by git
+# Docusaurus looks for files in the static directory during build
