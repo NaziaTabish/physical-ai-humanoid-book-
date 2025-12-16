@@ -1,63 +1,222 @@
 .features {
-  padding: 3rem 0;
+  padding: 4rem 0;
   width: 100%;
-  background-color: #f8f9fa;
+  background: linear-gradient(135deg, var(--ifm-background-gradient-start) 0%, var(--ifm-background-gradient-end) 100%);
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--ifm-font-color-base);
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sectionSubtitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+  color: var(--ifm-font-color-secondary);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
 }
 
 .chapterCard {
-  background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
+  background: var(--ifm-background-color);
+  border-radius: var(--ifm-border-radius);
+  padding: 2rem;
   height: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  border: 1px solid #e9ecef;
+  box-shadow: var(--ifm-global-shadow-md);
+  transition: var(--ifm-transition-medium);
+  border: 1px solid var(--ifm-border-color);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.chapterCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-secondary));
+  transform: scaleX(0);
+  transition: var(--ifm-transition-medium);
+}
+
+.chapterCard:hover::before {
+  transform: scaleX(1);
 }
 
 .chapterCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  border-color: #2e8555;
+  transform: translateY(-8px);
+  box-shadow: var(--ifm-global-shadow-xl);
+  border-color: var(--ifm-color-primary-lighter);
 }
 
 .chapterHeader {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.chapterHeader.blue {
+  color: var(--ifm-color-primary);
+}
+
+.chapterHeader.indigo {
+  color: #6366f1;
+}
+
+.chapterHeader.purple {
+  color: var(--ifm-color-secondary);
+}
+
+.chapterHeader.teal {
+  color: #0d9488;
+}
+
+.chapterHeader.amber {
+  color: #d97706;
+}
+
+.chapterHeader.emerald {
+  color: #059669;
+}
+
+.chapterIconWrapper {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--ifm-background-surface-color);
+  transition: var(--ifm-transition-fast);
+}
+
+.chapterCard:hover .chapterIconWrapper {
+  transform: scale(1.1);
+  background: var(--ifm-color-primary-lightest);
+}
+
+.chapterIcon {
+  width: 32px;
+  height: 32px;
+  transition: var(--ifm-transition-fast);
+}
+
+.chapterCard:hover .chapterIcon {
+  transform: scale(1.1);
 }
 
 .chapterNumber {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #2e8555;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  display: block;
+  color: var(--ifm-font-color-muted);
 }
 
 .chapterTitle {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #2c3e50;
-  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--ifm-font-color-base);
+  margin: 0 0 1rem 0;
   line-height: 1.4;
+  transition: var(--ifm-transition-fast);
+}
+
+.chapterCard:hover .chapterTitle {
+  color: var(--ifm-color-primary);
 }
 
 .chapterBody {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   flex-grow: 1;
 }
 
 .chapterDescription {
-  color: #555;
-  line-height: 1.6;
+  color: var(--ifm-font-color-secondary);
+  line-height: 1.7;
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .chapterFooter {
   text-align: center;
+  margin-top: auto;
+}
+
+.cardButton {
+  transition: var(--ifm-transition-medium);
+  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-primary-darker));
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+.cardButton:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ifm-global-shadow-md);
+  background: linear-gradient(135deg, var(--ifm-color-primary-dark), var(--ifm-color-primary-darkest));
 }
 
 .featureSvg {
   height: 200px;
   width: 200px;
+}
+
+/* Dark mode specific styles */
+[data-theme='dark'] .features {
+  background: linear-gradient(135deg, var(--ifm-background-gradient-start) 0%, var(--ifm-background-gradient-end) 100%);
+}
+
+[data-theme='dark'] .chapterCard {
+  background: var(--ifm-background-surface-color);
+}
+
+[data-theme='dark'] .chapterIconWrapper {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .chapterCard:hover .chapterIconWrapper {
+  background: rgba(96, 165, 250, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 996px) {
+  .chapterCard {
+    margin-bottom: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .chapterCard {
+    padding: 1.5rem;
+  }
 }

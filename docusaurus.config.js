@@ -52,11 +52,15 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      image: 'img/physical-ai-social-card.jpg', // Add social card image for better sharing
       navbar: {
         title: 'Physical AI & Humanoid Robotics',
         logo: {
           alt: 'Textbook Logo',
           src: 'img/favicon.ico',
+          srcDark: 'img/favicon.ico', // Add dark mode logo if available
+          width: 32,
+          height: 32,
         },
         items: [
           {
@@ -68,6 +72,11 @@ const config = {
           {
             to: '/docs/intro',
             label: 'Overview',
+            position: 'left',
+          },
+          {
+            to: '/docs/chapter-1-introduction-to-physical-ai',
+            label: 'Chapters',
             position: 'left',
           },
           {
@@ -106,26 +115,37 @@ const config = {
                 label: 'Chapter 2: Foundations of Robotics',
                 to: '/docs/chapter-2-foundations-of-robotics',
               },
+              {
+                label: 'Chapter 3: Human-Inspired Design Principles',
+                to: '/docs/chapter-3-human-inspired-design-principles',
+              },
+              {
+                label: 'Chapter 4: Perception Systems in Humanoids',
+                to: '/docs/chapter-4-perception-systems-in-humanoids',
+              },
+              {
+                label: 'Chapter 5: AI, Deep Learning & Control Systems',
+                to: '/docs/chapter-5-ai-deep-learning-control-systems',
+              },
+              {
+                label: 'Chapter 6: Humanoid Locomotion and Manipulation',
+                to: '/docs/chapter-6-humanoid-locomotion-manipulation',
+              },
             ],
           },
           {
             title: 'Resources',
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/your-username/book',
+                label: 'GitHub Repository',
+                href: 'https://github.com/NaziaTabish/physical-ai-humanoid-book-',
               },
               {
                 label: 'Docusaurus',
                 href: 'https://docusaurus.io',
               },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
               {
-                label: 'Physical AI',
+                label: 'Physical AI Research',
                 href: 'https://en.wikipedia.org/wiki/Physical_artificial_intelligence',
               },
               {
@@ -134,12 +154,45 @@ const config = {
               },
             ],
           },
+          {
+            title: 'Community',
+            items: [
+              {
+                label: 'Robotics Stack Exchange',
+                href: 'https://robotics.stackexchange.com/',
+              },
+              {
+                label: 'AI Research Papers',
+                href: 'https://arxiv.org/list/cs.RO/recent',
+              },
+              {
+                label: 'IEEE Robotics & Automation',
+                href: 'https://www.ieee-ras.org/',
+              },
+              {
+                label: 'Open Source Robotics',
+                href: 'https://www.osrfoundation.org/',
+              },
+            ],
+          },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics Textbook. Built with Docusaurus.`,
+        copyright: `<div class="footer__copyright">
+          Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics Textbook.
+          Built with <a href="https://docusaurus.io/" target="_blank" rel="noopener">Docusaurus</a> and ❤️ for the robotics community.
+        </div>`,
       },
       prism: {
         theme: require('prism-react-renderer').themes.github,
-        darkTheme: require('prism-react-renderer').themes.dracula,
+        darkTheme: require('prism-react-renderer').themes.vsDark,
+        additionalLanguages: ['python', 'cpp', 'robotframework'],
+      },
+      algolia: {
+        // Optional: configure Algolia search
+        appId: 'YOUR_APP_ID',
+        apiKey: 'YOUR_SEARCH_API_KEY',
+        indexName: 'physical-ai-humanoid-robotics',
+        contextualSearch: true,
+        searchPagePath: 'search',
       },
     }),
 };

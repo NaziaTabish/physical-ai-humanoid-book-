@@ -1,56 +1,208 @@
-/* New Professional Theme for Physical AI & Humanoid Robotics Textbook */
+/* Modern Professional Theme for Physical AI & Humanoid Robotics Textbook */
 :root {
-  --ifm-color-primary: #1a73e8; /* Google blue */
-  --ifm-color-primary-dark: #1557b0;
-  --ifm-color-primary-darker: #144b9e;
-  --ifm-color-primary-darkest: #113d81;
-  --ifm-color-primary-light: #4285f4;
-  --ifm-color-primary-lighter: #5a95f5;
-  --ifm-color-primary-lightest: #84aef7;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(26, 115, 232, 0.1);
+  /* Primary Colors - Deep Teal & Coral Theme */
+  --ifm-color-primary: #0f766e; /* Deep teal */
+  --ifm-color-primary-dark: #0d5a56;
+  --ifm-color-primary-darker: #0a4541;
+  --ifm-color-primary-darkest: #083230;
+  --ifm-color-primary-light: #14b8a6;
+  --ifm-color-primary-lighter: #2dd4bf;
+  --ifm-color-primary-lightest: #a7f3d0;
 
-  /* Additional theme colors */
-  --ifm-color-secondary: #6c757d;
-  --ifm-color-success: #28a745;
-  --ifm-color-info: #17a2b8;
-  --ifm-color-warning: #ffc107;
-  --ifm-color-danger: #dc3545;
+  /* Secondary Colors - Coral Accent */
+  --ifm-color-secondary: #f97316; /* Coral orange */
+  --ifm-color-secondary-dark: #ea580c;
+  --ifm-color-secondary-light: #fb923c;
+
+  /* Success, Warning, Danger */
+  --ifm-color-success: #22c55e; /* Green */
+  --ifm-color-info: #06b6d4; /* Cyan */
+  --ifm-color-warning: #eab308; /* Yellow */
+  --ifm-color-danger: #ef4444; /* Red */
 
   /* Backgrounds */
   --ifm-background-color: #ffffff;
-  --ifm-background-surface-color: #f8f9fa;
+  --ifm-background-surface-color: #f0fdfa;
+  --ifm-background-gradient-start: #f0fdfa;
+  --ifm-background-gradient-end: #e6fffa;
 
-  /* Text */
-  --ifm-font-color-base: #202124;
+  /* Text Colors */
+  --ifm-font-color-base: #111827;
   --ifm-font-color-base-inverse: #ffffff;
-  --ifm-font-color-secondary: #5f6368;
+  --ifm-font-color-secondary: #4b5563;
+  --ifm-font-color-muted: #6b7280;
 
   /* Borders */
-  --ifm-border-color: #dadce0;
+  --ifm-border-color: #d1fae5;
+  --ifm-border-radius: 16px;
+  --ifm-border-radius-medium: 10px;
+  --ifm-border-radius-small: 6px;
 
   /* Shadows */
-  --ifm-global-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302);
-  --ifm-global-shadow-lw: 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-  --ifm-global-shadow-md: 0 1px 2px 1px rgba(60, 64, 67, 0.1);
-  --ifm-global-shadow-tl: 0 8px 10px 1px rgba(60, 64, 67, 0.1);
+  --ifm-global-shadow: 0 2px 4px -1px rgba(15, 118, 110, 0.1);
+  --ifm-global-shadow-lw: 0 1px 2px -1px rgba(15, 118, 110, 0.1);
+  --ifm-global-shadow-md: 0 6px 12px -4px rgba(15, 118, 110, 0.15);
+  --ifm-global-shadow-tl: 0 12px 20px -6px rgba(15, 118, 110, 0.15);
+  --ifm-global-shadow-xl: 0 20px 40px -10px rgba(15, 118, 110, 0.2);
+
+  /* Spacing */
+  --ifm-spacing-horizontal: 2.5rem;
+  --ifm-spacing-vertical: 2.5rem;
+
+  /* Code */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(15, 118, 110, 0.1);
+
+  /* Animation */
+  --ifm-transition-fast: all 0.15s ease;
+  --ifm-transition-medium: all 0.3s ease;
+  --ifm-transition-slow: all 0.5s ease;
 }
 
 /* Dark mode theme */
 [data-theme='dark'] {
-  --ifm-color-primary: #8ab4f8; /* Light blue */
-  --ifm-color-primary-dark: #658def;
-  --ifm-color-primary-darker: #527ee9;
-  --ifm-color-primary-darkest: #3365c7;
-  --ifm-color-primary-light: #a6c7ff;
-  --ifm-color-primary-lighter: #b9d5ff;
-  --ifm-color-primary-lightest: #e6f0ff;
-  --docusaurus-highlighted-code-line-bg: rgba(138, 180, 248, 0.2);
+  /* Primary Colors - Lighter for contrast */
+  --ifm-color-primary: #2dd4bf; /* Light teal */
+  --ifm-color-primary-dark: #14b8a6;
+  --ifm-color-primary-darker: #0f766e;
+  --ifm-color-primary-darkest: #0d5a56;
+  --ifm-color-primary-light: #5eead4;
+  --ifm-color-primary-lighter: #a7f3d0;
+  --ifm-color-primary-lightest: #d1fae5;
 
-  /* Dark mode additional colors */
-  --ifm-background-color: #0d1117;
-  --ifm-background-surface-color: #161b22;
-  --ifm-font-color-base: #e6e6e6;
-  --ifm-font-color-secondary: #8b949e;
-  --ifm-border-color: #30363d;
+  /* Secondary Colors - Light coral */
+  --ifm-color-secondary: #fb923c; /* Light coral */
+  --ifm-color-secondary-dark: #f97316;
+  --ifm-color-secondary-light: #fdba74;
+
+  /* Dark mode specific colors */
+  --ifm-background-color: #020814; /* Deep dark blue */
+  --ifm-background-surface-color: #0f172a;
+  --ifm-background-gradient-start: #0f172a;
+  --ifm-background-gradient-end: #1e293b;
+
+  /* Text Colors */
+  --ifm-font-color-base: #f8fafc; /* Light gray */
+  --ifm-font-color-secondary: #cbd5e1;
+  --ifm-font-color-muted: #94a3b8;
+
+  /* Borders */
+  --ifm-border-color: #1e293b;
+
+  /* Success, Warning, Danger */
+  --ifm-color-success: #4ade80; /* Light green */
+  --ifm-color-info: #22d3ee; /* Light cyan */
+  --ifm-color-warning: #fde047; /* Light yellow */
+  --ifm-color-danger: #f87171; /* Light red */
+
+  --docusaurus-highlighted-code-line-bg: rgba(45, 212, 191, 0.2);
+}
+
+/* Global font styling - Changed to Roboto Flex for better readability */
+html {
+  font-family: 'Roboto Flex', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Enhanced focus states for accessibility */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ifm-background-surface-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ifm-color-primary-lighter);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ifm-color-primary);
+}
+
+/* Custom footer styling */
+.footer {
+  background: linear-gradient(135deg, var(--ifm-color-primary-darker) 0%, var(--ifm-color-secondary-dark) 100%) !important;
+  padding: 4rem 0 2rem 0 !important;
+  color: white;
+}
+
+.footer__title {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.footer__link-item {
+  color: rgba(255, 255, 255, 0.85);
+  transition: var(--ifm-transition-fast);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.footer__link-item:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+.footer__links {
+  margin-bottom: 2.5rem;
+}
+
+.footer__copyright {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+}
+
+.footer__copyright a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: underline;
+}
+
+.footer__copyright a:hover {
+  color: white;
+}
+
+/* Dark mode footer styling */
+[data-theme='dark'] .footer {
+  background: linear-gradient(135deg, var(--ifm-color-primary-darkest) 0%, var(--ifm-color-secondary-dark) 100%) !important;
+}
+
+/* Newsletter/signup section in footer */
+.footer__bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 0 1.5rem 0 !important;
+  }
+
+  .footer__links {
+    margin-bottom: 2rem;
+  }
 }
